@@ -1,0 +1,67 @@
+#Задание 1
+
+a = 5
+b = 20
+c = 8
+print(a + b - c)
+
+a = int(input("ВВедите число: "))
+b = int(input("ВВедите число: "))
+c = int(input("ВВедите число: "))
+print(a + b + c)
+
+#Задание 2
+
+import time
+
+n = int(input("Введите время в секундах: "))
+time_format = time.strftime("%H:%M:%S", time.gmtime(n))
+print("Time: ", time_format)
+
+#Задание 3
+
+n = int(input("Введите число: "))
+a = str(n)
+b = a + a
+c = a + a + a
+k = n + int(b) + int(c)
+print("Итого:", k)
+
+#Задание 4
+
+a = int(input("Введите число: "))
+b = a % 10
+a = a // 10
+while a > 0:
+    if a % 10 > b:
+        b = a % 10
+    a = a // 10
+print(b)
+
+#Задание 5
+
+a = int(input("Введите значение выручки: "))
+b = int(input("Введите значение издержек: "))
+print(a-b)
+if ( a - b ) > 0:
+    print("Прибыль")
+else:
+    print("Убыток")
+if (a - b) > 0:
+    print("Рентабельность =", (a-b)/a)
+    c = int(input("Введите колличество сотрудников: "))
+    print("Прибыль на одного мотрудника", (a - b) / c)
+    
+  #Задание 6
+  
+  a = int(input("Введите результат км за 1-й день: "))
+y = int(input("Введите цель по км: "))
+day = 1
+result = a
+while result < y:
+    print(day, "-й день:", round(result, 2), "км")
+    a = a + 0.1 * a
+    day += 1
+    result = result + a
+    if result > y:
+        print("На", day, "-й день спортсмен достиг результата - не менее", y, "км")
