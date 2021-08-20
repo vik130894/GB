@@ -2,6 +2,16 @@
 #(выработка в часах*ставка в час) + премия.
 #Во время выполнения расчёта для конкретных значений необходимо запускать скрипт с параметрами.
 
+from sys import argv
+
+file_name, worked_hour, rate, benefit = argv
+
+calculation = (int(worked_hour) * int(rate)) + int(benefit)
+print(f"Заработная плата составляет {calculation}")
+#не забудьте указать параметры в конфигурации
+
+#Второй способ 
+
 def salary():
     try:
         hour = int(input('Выработка в часах: '))
