@@ -14,3 +14,19 @@ while True:
    
 #Задание 2
 
+my_list = ['Henry Ford\n', 'Ann\n', 'Robin Sharma is writer\n']
+with open("data_2.txt", 'w') as my_file:
+    my_file.writelines(my_list)
+with open("data_2.txt") as my_file:
+    lines = 0
+    words = 0
+    for line in my_file:
+        lines += line.count("\n")
+        words = len(line.split())
+        print(f"{words} слов в строке")
+    print(f"Всего строк: {lines}")
+    
+#Задание 3
+
+
+
