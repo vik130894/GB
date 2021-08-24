@@ -28,5 +28,32 @@ with open("data_2.txt") as my_file:
     
 #Задание 3
 
+list = {'Ford': 15000, 'Sharma': 23000, 'Holmes': 18000, 'Jones': 14000, 'Kelly': 10000, 'Little': 21000,
+        'Miller': 12000, 'Murphy': 24000, 'Nelson': 20000, 'Taylor': 19000 }
+try:
+    my_file = open("data_3.txt", 'w')
+    for last_name, salary in list.items():
+        my_file.write(last_name + ':' + str(salary) + "\n")
+except IOError:
+    print("Произошла ошибка ввода-вывода!")
+finally:
+    my_file.close()
+summa = 0
+count = 0
+persons = []
+with open("data_3.txt", "r") as my_file:
+    for line in my_file:
+        print(line, end="")
+        tokens = line.split(':')
+        if int(tokens[1]) <= 20000:
+            persons.append(tokens[0])
+        summa += int(tokens[1])
+        count += 1
+result = summa / count
+print(f"Сотрудники с окладом менее 20 тыс: {persons}")
+print(f"Средний доход сотрудников: {result}")
+
+#Задание 4
+
 
 
