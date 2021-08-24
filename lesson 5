@@ -53,7 +53,22 @@ result = summa / count
 print(f"Сотрудники с окладом менее 20 тыс: {persons}")
 print(f"Средний доход сотрудников: {result}")
 
-#Задание 4
+#Задание 5
+
+def summary():
+    try:
+        with open('data_5.txt', 'w+') as my_file:
+            line = input('Введите цифры через пробел \n')
+            my_file.writelines(line)
+            my_numb = line.split()
+
+            print(sum(map(int, my_numb)))
+    except IOError:
+        print('Ошибка в файле')
+    except ValueError:
+        print('Ошибка ввода-вывода')
+summary()
+
 
 
 
