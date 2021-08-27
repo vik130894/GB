@@ -27,3 +27,22 @@ print(traff_light.running())
 
 #Задание2
 
+class Road:
+    _length: int
+    _width: int
+
+    def __init__(self, _length, _width, mass, thickness):
+        self._length = _length
+        self._width = _width
+        self.mass = mass
+        self.thickness = thickness
+
+    def masasph(self):
+        return self._length * self._width * self.mass * self.thickness
+
+
+test = Road(20, 5000, 25, 5)
+print(f'Масса асфальта: {test.masasph()/1000} тонн')
+
+#Задание 3
+
