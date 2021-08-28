@@ -73,3 +73,97 @@ print(test.get_full_name())
 print(test.get_total_income())
 
 #Задание 4
+
+class Car:
+    name: str
+    color: str
+    speed: float
+    is_police: bool
+
+    def __init__(self, name, color, speed, is_police):
+        self.name = name
+        self.color = color
+        self.speed = speed
+        self.is_police = is_police
+
+    def go(self):
+        return print('Поехали')
+
+    def stop(self):
+        return print('Остановились')
+
+    def turn(self, direction):
+        return print(f'Повернули {direction}')
+
+    def show_speed(self):
+        return self.speed
+
+
+class TownCar(Car):
+    def __init__(self, name, color, speed, is_police):
+        self.name = name
+        self.color = color
+        self.speed = speed
+        self.is_police = is_police
+
+    def info(self):
+        print(self.name, self.color, self.speed, self.is_police)
+
+    def show_speed(self):
+        if self.speed > 60:
+            return print(f"Превышение скорости {self.name}!")
+
+
+class SportCar(Car):
+    def __init__(self, name, color, speed, is_police):
+        self.name = name
+        self.color = color
+        self.speed = speed
+        self.is_police = is_police
+
+    def info(self):
+        print(self.name, self.color, self.speed, self.is_police)
+
+
+class WorkCar(Car):
+    def __init__(self, name, color, speed, is_police):
+        self.name = name
+        self.color = color
+        self.speed = speed
+        self.is_police = is_police
+
+    def info(self):
+        print(self.name, self.color, self.speed, self.is_police)
+
+    def show_speed(self):
+        if self.speed > 40:
+            return print(f"Превышение скорости {self.name}!")
+        return self.speed
+
+
+class PoliceCar(Car):
+    def __init__(self, name, color, speed, is_police):
+        self.name = name
+        self.color = color
+        self.speed = speed
+        self.is_police = is_police
+
+    def info(self):
+        print(self.name, self.color, self.speed, self.is_police)
+
+
+bmw = TownCar("BMW", "Orange", 80, False)
+fer = SportCar("Ferrari", "Red", 120, False)
+kia = WorkCar("KIA", "Black", 60, False)
+reno = PoliceCar("Reno", "White", 40, True)
+
+bmw.info(), bmw.show_speed()
+
+fer.info()
+
+kia.info(), kia.show_speed()
+
+reno.info()
+
+#Задание 5
+
