@@ -72,7 +72,7 @@ test = Position(name="Stan", surname="Smith", wage=30.23, bonus=11.65)
 print(test.get_full_name())
 print(test.get_total_income())
 
-#Задание 4
+#Задание 4,5
 
 class Car:
     name: str
