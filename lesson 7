@@ -61,3 +61,38 @@ suit.show_name()
 
 #Задание 3
 
+class Cell:
+    def __init__(self, count: int):
+        self.count = count
+
+    def __add__(self, other):
+        return self.count + other.count
+
+    def __sub__(self, other):
+        sub = self.count - other.count
+        if sub > 0:
+            return sub
+        else:
+            return f"{sub} < 0"
+
+    def __mul__(self, other):
+        self.count * other.count
+
+    def __truediv__(self, other):
+        self.count // other.count
+
+    def make_order(self, row):
+        result = ''
+        for i in range(int(self.count / row)):
+            result += '*' * row + '\n'
+        result += '*' * (self.count % row) + '\n'
+        return result
+
+
+cell = Cell(12)
+cell_2 = Cell(4)
+print(cell + cell_2)
+print(cell - cell_2)
+print(cell / cell_2)
+print(cell * cell_2)
+print(cell.make_order(7))
