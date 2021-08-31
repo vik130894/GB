@@ -53,8 +53,8 @@ class Suit(Clothes):
         print("Костюм")
 
 
-coat = Coat(58)
-suit = Suit(167)
+coat = Coat(6)
+suit = Suit(16.7)
 print(coat.consumption())
 print(suit.consumption())
 suit.show_name()
